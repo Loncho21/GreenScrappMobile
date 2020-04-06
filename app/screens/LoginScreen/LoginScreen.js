@@ -9,33 +9,17 @@ import button from '@components/Botton/style';
 
 const LoginScreen = () => {
    
-    const [value , scrollY] = useState(new Animated.Value(0))
-
-
-    useEffect (()=> {
-        scrollY = new Animated.Value(0);
-        this.changingHeight = scrollY.interpolate({
-            inputRange: [0, 50],
-            outputRange: [120, 60],
-            extrapolate: "clamp"
-        });
-        this.props.navigation.setParams({
-            changingHeight: this.changingHeight
-        });
-    });
+    const [userEmail, setUserEmail] = React.useState('');
+    const [userPassword, setUserPassword] = React.useState('');
 
     return(
         <SafeAreaView style={{flex: 1, backgroundColor: '#FFFFFF', }}>
-        <ScrollView   
-            scrollEventThrottle={16}
-            onScroll={Animated.event([{ nativeEvent: { contentOffset: { y: scrollY}}}])}
-          
-        >
+        <ScrollView>
             <View style={loginstyle.logincontent}>
                 <Text style={loginstyle.textlogin}>Email ó número de telefono</Text>
-                <TextInput style={loginstyle.input} placeholder={'P. ej. : 030 123 4567'}/>
+                <TextInput style={loginstyle.input} type='Email' placeholder={'P. ej. : 030 123 4567'}/>
                 <Text style={loginstyle.textlogin} >Contraseña</Text>
-                <TextInput  style={loginstyle.input} textContentType={'password'} placeholder={'Contraseña'}/>
+                <TextInput  style={loginstyle.input} autoCompleteType={'password'} placeholder={'Contraseña'}/>
                 <Botton
                 boton={button.solid}
                 // image={require('../../assets/facebook.png')}

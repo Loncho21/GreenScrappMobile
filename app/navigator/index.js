@@ -19,7 +19,7 @@ const AppNavigator = () => {
             name={'SplashScreen'} 
             component={SplashScreen} 
             options={{
-                header: ({ navigation,scene, previous, route}) => {
+                header: ({ navigation,scene, previous}) => {
                   const { options } = scene.descriptor;
                   const title =
                     options.headerTitle !== undefined
@@ -36,8 +36,6 @@ const AppNavigator = () => {
                       previous ? navigation.goBack : undefined
                     }
                     alternativeButton={() => navigation.navigate('LoginScreen')}
-                    {...navigation}
-                    {...route}
                     />
                 }
             }}
@@ -46,7 +44,7 @@ const AppNavigator = () => {
           name={'LoginScreen'}
           component={LoginScreen}
           options={{
-            header: ({ navigation,scene, previous, route}) => {
+            header: ({ navigation,scene, previous}) => {
               const { options } = scene.descriptor;
               const title =
                 options.headerTitle !== undefined
@@ -62,8 +60,6 @@ const AppNavigator = () => {
                 back={
                   previous ? navigation.goBack : undefined
                 }
-                {...navigation}
-                {...route}
                 />
             }
           }}
