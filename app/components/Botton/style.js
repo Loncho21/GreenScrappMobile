@@ -6,16 +6,18 @@ const button = StyleSheet.create(
             fontFamily:'SpaceGrotesk-Bold',
             color:'#07A004',
             fontWeight:'bold',
+            fontSize:17,
             marginRight: '20%'
         },
         basic:{
             flexDirection:'row',
             backgroundColor:'#FFFFFF',
-            height: '9%',
-            width: '90%' ,
+            height: 40,
+            width: '100%' ,
             borderColor:'#07A004',
             borderRadius:8,
-            borderWidth:1.5
+            borderWidth:1.5,
+            marginBottom:20
         },
         content:{
             width:'80%',
@@ -30,23 +32,25 @@ const button = StyleSheet.create(
         solid:{
             flexDirection:'row',
             backgroundColor:'#07A004',
-            height: '9%',
-            width: '90%' ,
+            height: 40,
+            width: '100%' ,
             borderColor:'#07A004',
             borderRadius:8,
-            borderWidth:1.5
+            borderWidth:1.5,
+            marginBottom:20
         },
         textsolid:{
             fontFamily:'SpaceGrotesk-Bold',
             color:'#FFFFFF',
             fontWeight:'bold',
+            fontSize:17,
             marginRight: '20%'
         },
         disable:{
             flexDirection:'row',
             backgroundColor:'#E0E0E0',
-            height: '9%',
-            width: '90%' ,
+            height: 40,
+            width: '100%' ,
             borderColor:'#E0E0E0',
             borderRadius:8,
             borderWidth:1.5,
@@ -58,6 +62,7 @@ const button = StyleSheet.create(
             shadowOpacity: 0.23,
             shadowRadius: 2.62,
             elevation: 4,
+            marginBottom:20
         }
 
 
