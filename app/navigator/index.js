@@ -11,7 +11,8 @@ import SplashScreen from '@screens/SplashScreen';
 import LoginScreen from '@screens/LoginScreen';
 
 const AppNavigator = () => {
-  return (
+   
+    return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="SplashScreen" >
         <Stack.Screen 

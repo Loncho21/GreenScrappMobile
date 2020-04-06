@@ -8,9 +8,13 @@ import loginstyle from './style';
 import button from '@components/Botton/style';
 
 const LoginScreen = () => {
+   
+    const [value , scrollY] = useState(new Animated.Value(0))
+
+
     useEffect (()=> {
-        this.scrollY = new Animated.Value(0);
-        this.changingHeight = this.scrollY.interpolate({
+        scrollY = new Animated.Value(0);
+        this.changingHeight = scrollY.interpolate({
             inputRange: [0, 50],
             outputRange: [120, 60],
             extrapolate: "clamp"
@@ -24,7 +28,7 @@ const LoginScreen = () => {
         <SafeAreaView style={{flex: 1, backgroundColor: '#FFFFFF', }}>
         <ScrollView   
             scrollEventThrottle={16}
-            onScroll={Animated.event([{ nativeEvent: { contentOffset: { y: this.scrollY}}}])}
+            onScroll={Animated.event([{ nativeEvent: { contentOffset: { y: scrollY}}}])}
           
         >
             <View style={loginstyle.logincontent}>
